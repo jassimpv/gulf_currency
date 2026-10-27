@@ -1,5 +1,5 @@
 import 'currency_symbol_text_base.dart';
-import 'omr_currency_formatter_base.dart';
+import '../formatting/omr_currency_formatter_base.dart';
 
 /// Displays [value] as Omani Rial currency text using the official Rial
 /// symbol, with the bundled [OmrCurrencyFormatter.symbolFontFamily] font

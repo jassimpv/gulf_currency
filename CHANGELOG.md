@@ -1,3 +1,11 @@
+## 2.0.1
+
+- Null, empty, or whitespace-only amounts now display only the currency symbol; example amount badges are constrained to prevent horizontal overflow.
+- Added a shared catalog of circulating currency names, symbols, and representative flags, including local currencies without ISO codes.
+- Updated the default picker to use the circulating currency catalog and expose `CurrencyOption.isIso4217`.
+- Added `CurrencyText.currencyCode` for formatting the selected currency independently of its display locale.
+- Updated current locale currency mappings and redesigned the example with currency cards and a selected amount preview.
+
 ## 2.0.0
 
 - **Breaking:** package renamed from `gulf_currency_formatter` to `gulf_currency`. Update your `pubspec.yaml` dependency and import statements accordingly.

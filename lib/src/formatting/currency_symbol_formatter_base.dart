@@ -55,7 +55,9 @@ abstract class SymbolCurrencyFormatter {
 
   /// Formats [value] using this formatter's configured options.
   ///
-  /// [value] must be an [int], [double], [num], or a numeric [String].
+  /// [value] may be an [int], [double], [num], a numeric [String], or null.
+  /// Null, empty, or whitespace-only values return only the configured symbol
+  /// or code, or an empty string when both are hidden.
   String formatValue(dynamic value) {
     return formatCurrencyValue(
       value,

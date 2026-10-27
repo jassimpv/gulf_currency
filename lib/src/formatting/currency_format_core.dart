@@ -33,12 +33,17 @@ T withLocaleFallback<T>(String locale, T Function(String locale) build) {
 /// [SarCurrencyFormatter], and the generic currency formatter. Not exported;
 /// only the currency symbol/code differ between currencies, so the
 /// formatting logic lives here once.
+/// Null, empty, or whitespace-only values return an empty numeral for
+/// symbol-only display instead of being parsed as a number.
 CurrencyParts formatCurrencyParts(
   dynamic value, {
   required int decimalDigits,
   required String locale,
   required bool compact,
 }) {
+  if (value == null || (value is String && value.trim().isEmpty)) {
+    return (numberPart: '', isNegative: false);
+  }
   final num amount = toNumOrThrow(value);
   final bool isNegative = amount < 0;
   final num absAmount = amount.abs();
@@ -79,6 +84,8 @@ NumberFormat _currencyNumberFormat({
 
 /// Formats [value] as a full currency string, combining the symbol/code
 /// prefix, the numeral, and any negative-value wrapping.
+/// Null or empty strings return only the configured symbol or code, without
+/// spaces.
 String formatCurrencyValue(
   dynamic value, {
   required String symbolText,
@@ -97,6 +104,11 @@ String formatCurrencyValue(
     locale: locale,
     compact: compact,
   );
+
+  if (parts.numberPart.isEmpty) {
+    if (showSymbol) return symbolText;
+    return showCode ? codeText : '';
+  }
 
   final String spacing = ' ' * symbolSpacing;
   final String prefix = showSymbol

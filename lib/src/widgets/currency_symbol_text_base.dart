@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import 'currency_negative_format.dart';
+import '../formatting/currency_negative_format.dart';
 import 'currency_symbol_spans.dart';
 
 /// Shared implementation behind the currency-specific widgets that use this
@@ -22,8 +22,8 @@ abstract class SymbolCurrencyText extends StatelessWidget {
     this.maxLines,
   });
 
-  /// The value to format; must be an [int], [double], [num], or a numeric
-  /// [String].
+  /// The value to format: an [int], [double], [num], a numeric [String], or null.
+  /// Null, empty, or whitespace-only values display only the symbol.
   final dynamic value;
 
   /// Number of digits to show after the decimal point.

@@ -28,8 +28,7 @@ class OmrCurrencyFormatter extends SymbolCurrencyFormatter {
   ///
   /// Flutter namespaces fonts a package declares in its own pubspec.yaml as
   /// `packages/<package_name>/<family>`, so this is *not* just `'OmaniRial'`.
-  static const String symbolFontFamily =
-      'packages/gulf_currency/OmaniRial';
+  static const String symbolFontFamily = 'packages/gulf_currency/OmaniRial';
 
   /// Creates a reusable, configured OMR currency formatter.
   const OmrCurrencyFormatter({

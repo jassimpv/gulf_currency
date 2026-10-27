@@ -1,5 +1,5 @@
 import 'currency_symbol_text_base.dart';
-import 'sar_currency_formatter_base.dart';
+import '../formatting/sar_currency_formatter_base.dart';
 
 /// Displays [value] as Saudi Riyal currency text using the new Saudi Riyal
 /// symbol, with the bundled [SarCurrencyFormatter.symbolFontFamily] font

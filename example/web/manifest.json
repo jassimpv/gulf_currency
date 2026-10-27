@@ -1,0 +1,9 @@
+{
+  "name": "Gulf Currency Example",
+  "short_name": "Gulf Currency",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff8ff",
+  "theme_color": "#7c4dff",
+  "description": "Example app for the Gulf Currency Flutter package."
+}

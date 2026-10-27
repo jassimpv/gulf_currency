@@ -1,4 +1,4 @@
-import 'aed_currency_formatter_base.dart';
+import '../formatting/aed_currency_formatter_base.dart';
 import 'currency_symbol_text_base.dart';
 
 /// Displays [value] as UAE Dirham currency text using the official Dirham

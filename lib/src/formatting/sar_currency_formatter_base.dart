@@ -30,8 +30,7 @@ class SarCurrencyFormatter extends SymbolCurrencyFormatter {
   /// Flutter namespaces fonts a package declares in its own pubspec.yaml as
   /// `packages/<package_name>/<family>`, so this is *not* just
   /// `'SaudiRiyal'`.
-  static const String symbolFontFamily =
-      'packages/gulf_currency/SaudiRiyal';
+  static const String symbolFontFamily = 'packages/gulf_currency/SaudiRiyal';
 
   /// Creates a reusable, configured SAR currency formatter.
   const SarCurrencyFormatter({

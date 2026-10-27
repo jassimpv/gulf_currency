@@ -34,8 +34,7 @@ class AedCurrencyFormatter extends SymbolCurrencyFormatter {
   ///
   /// Flutter namespaces fonts a package declares in its own pubspec.yaml as
   /// `packages/<package_name>/<family>`, so this is *not* just `'Dirham'`.
-  static const String symbolFontFamily =
-      'packages/gulf_currency/Dirham';
+  static const String symbolFontFamily = 'packages/gulf_currency/Dirham';
 
   /// Creates a reusable, configured AED currency formatter.
   const AedCurrencyFormatter({

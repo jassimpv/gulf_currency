@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-import 'currency_format_core.dart';
-import 'currency_negative_format.dart';
+import '../formatting/currency_format_core.dart';
+import '../formatting/currency_negative_format.dart';
 
 /// Builds the [InlineSpan]s for a currency-symbol widget (`AedText`,
 /// `SarText`), applying [symbolFontFamily] to *only* the symbol character.
@@ -14,7 +14,7 @@ import 'currency_negative_format.dart';
 List<InlineSpan> buildCurrencySymbolSpans({
   required dynamic value,
   required String symbolText,
-  required String symbolFontFamily,
+  required String? symbolFontFamily,
   required int decimalDigits,
   required String locale,
   required int symbolSpacing,
@@ -27,11 +27,13 @@ List<InlineSpan> buildCurrencySymbolSpans({
     locale: locale,
     compact: compact,
   );
-  final String spacing = ' ' * symbolSpacing;
   final TextSpan symbolSpan = TextSpan(
     text: symbolText,
     style: TextStyle(fontFamily: symbolFontFamily),
   );
+  if (parts.numberPart.isEmpty) return <InlineSpan>[symbolSpan];
+
+  final String spacing = ' ' * symbolSpacing;
   final TextSpan numberSpan = TextSpan(text: '$spacing${parts.numberPart}');
 
   switch (negativeFormat) {

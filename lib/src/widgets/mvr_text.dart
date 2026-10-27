@@ -1,5 +1,5 @@
 import 'currency_symbol_text_base.dart';
-import 'mvr_currency_formatter_base.dart';
+import '../formatting/mvr_currency_formatter_base.dart';
 
 /// Displays [value] as Maldivian Rufiyaa currency text using the official
 /// Rufiyaa symbol, with the bundled [MvrCurrencyFormatter.symbolFontFamily]
