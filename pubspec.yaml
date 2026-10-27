@@ -3,7 +3,7 @@ description: >-
   Format currency text and widgets for AED, SAR, OMR, and MVR with bundled
   official symbol fonts, plus generic locale-based formatting for every
   other currency.
-version: 2.0.1
+version: 2.0.2
 homepage: https://github.com/jassimpv/gulf_currency
 repository: https://github.com/jassimpv/gulf_currency
 issue_tracker: https://github.com/jassimpv/gulf_currency/issues

@@ -61,7 +61,7 @@ Add this to pubspec.yaml:
 
 ```yaml
 dependencies:
-  gulf_currency: ^2.0.1
+  gulf_currency: ^2.0.2
 ```
 
 Enable the Material Icons font in your app's `pubspec.yaml` for the picker's
@@ -264,7 +264,7 @@ through `options` for a custom selection.
 The screenshot below shows the example app with the currency picker and
 formatted currency samples:
 
-![Gulf Currency example app](assets/screenshots/phone.png)
+![Gulf Currency example app](https://raw.githubusercontent.com/jassimpv/gulf_currency/main/assets/screenshots/phone.png)
 
 ## Example app
 

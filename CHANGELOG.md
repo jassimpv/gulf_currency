@@ -1,3 +1,7 @@
+## 2.0.2
+
+- Fixed the package README screenshot link so the example image renders on pub.dev.
+
 ## 2.0.1
 
 - Null, empty, or whitespace-only amounts now display only the currency symbol; example amount badges are constrained to prevent horizontal overflow.
